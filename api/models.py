@@ -16,7 +16,19 @@ class CarPart(models.Model):
     name = models.CharField(max_length=256)
     car = models.ForeignKey(Car, on_delete=models.CASCADE, related_name='parts', null=True, blank=False)
     qty = models.IntegerField()
+    replacable = models.BooleanField(null=True, blank=True)
 
     class Meta:
         verbose_name = 'Car Part'
         verbose_name_plural = 'Car Parts'
+
+
+class CarBrokenPart(models.Model):
+    name = models.CharField(max_length=256)
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, related_name='broken_parts', null=True, blank=False)
+    qty = models.IntegerField()
+    repairable = models.BooleanField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Car Broken Part'
+        verbose_name_plural = 'Car Broken Part'
