@@ -32,3 +32,12 @@ class CarBrokenPart(models.Model):
     class Meta:
         verbose_name = 'Car Broken Part'
         verbose_name_plural = 'Car Broken Part'
+
+
+class Bike(models.Model):
+    name = models.CharField(max_length=256, unique=True)
+    description = models.TextField(null=True, blank=True)
+    price = models.IntegerField()
+    class Meta:
+        verbose_name = 'Bike'
+        verbose_name_plural = 'Bike'
