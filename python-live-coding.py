@@ -19,10 +19,6 @@ def get_unsorted_list_with_missed_number():
 
 a = get_unsorted_list_with_missed_number()
 
-# # Write your code below
-# b = [item for item in range(1, 101)]
-# print(set(b) - set(a))
-
 
 # =============================================================================
 '''
@@ -36,7 +32,6 @@ class A:
 class B:
     attr2= 2
 
-# -------------------------
 class C(A, B):
     attr3=3
 
@@ -51,8 +46,6 @@ print(a.attr2)
 '''
 degrees = {i: i*i for i in range(1, 10)}
 
-#-------------------
-# degrees = dict(zip(degrees.values(), degrees.keys()))
 
 # =============================================================================
 '''
@@ -62,17 +55,11 @@ import string
 
 alphabet = [i for i in string.ascii_lowercase]
 
-#-------------------
-print(', '.join(alphabet))
 # =============================================================================
 '''
 Как можно подсчитать количество вхождений каждой буквы?
 '''
 glossolalia = 'абабагаламага'
-
-#-------------------
-# from collections import Counter
-# letter_counter = Counter(list(glossolalia))
 
 
 # =============================================================================
