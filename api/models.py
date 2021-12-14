@@ -1,4 +1,5 @@
 from django.db import models
+from company.models import  CarModel
 
 # Create your models here.
 
@@ -6,6 +7,7 @@ class Car(models.Model):
     name = models.CharField(max_length=256, unique=True)
     description = models.TextField(null=True, blank=True)
     price = models.IntegerField()
+    model = models.ForeignKey(CarModel, on_delete=models.CASCADE, related_name='cars', null=True)
 
     class Meta:
         verbose_name = 'Car'
